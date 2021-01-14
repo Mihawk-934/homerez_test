@@ -1,0 +1,21 @@
+.search {
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 56px;
+}
+
+.search__title {
+    font-size: 13px;
+    margin: 5px 15px;
+}
+  
+.search__input {
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    margin: 5px 15px;
+  }
+  
+.search__input:focus {
+    outline:  none;
+}

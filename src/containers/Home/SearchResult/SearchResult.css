@@ -1,0 +1,13 @@
+.results {
+    margin-top: 32px;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.result__title , .result__description{
+    margin-bottom: 16px;
+}
+
+.result__title {
+    margin-top: 16px;
+}

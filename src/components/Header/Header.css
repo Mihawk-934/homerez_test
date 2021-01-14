@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+  
+.header__back, .header__liked {  
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 0;
+    margin-top: 14px;
+}
+
+.header__back {
+    color: rgba(53, 131, 234);
+}
+
+.header__liked {
+    color: rgb(239, 100, 174);
+}
