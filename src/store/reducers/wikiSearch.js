@@ -2,18 +2,20 @@ import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from '../utility';
 
 const initialState = {
-    inputValue: '',
-    result: null,
+    inputValue: localStorage.getItem('inputValue') || '',
+    result: JSON.parse(localStorage.getItem('result')) || null,
     liked: JSON.parse(localStorage.getItem('liked')) || []
 }
 
 const inputValue = (state, action) => {
+    localStorage.setItem('inputValue', action.inputValue);
     return updateObject( state, {
         inputValue: action.inputValue
     });
 }
 
 const result = (state, action) => {
+    localStorage.setItem('result', JSON.stringify(action.result));
     return updateObject( state, {
         result: action.result
     });
