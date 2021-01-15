@@ -2,7 +2,6 @@ import React from 'react';
 import * as actions from '../../store/actions/index';
 import { useSelector, useDispatch } from 'react-redux';
 import './Button.css';
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

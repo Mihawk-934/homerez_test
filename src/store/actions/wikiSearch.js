@@ -22,7 +22,6 @@ export const liked = (liked) => {
     }
 };
 
-
 export const fecthValue = (inputValue) => {
     return dispatch => {
         axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${inputValue}`)
