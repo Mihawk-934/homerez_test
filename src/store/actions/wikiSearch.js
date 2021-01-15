@@ -13,28 +13,37 @@ export const result = (result) => {
         type: actionTypes.RESULT,
         result: result
     }
-}
+};
 
 export const liked = (liked) => {
     return {
         type: actionTypes.LIKED,
         liked: liked
     }
-}
+};
+
+export const error = () => {
+    return {
+        type: actionTypes.ERROR
+    }
+};
 
 export const fecthValue = (inputValue) => {
     return dispatch => {
         axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${inputValue}`)
         .then(response => {
             const data = { 
-                            title: response.data.title,
-                            description: response.data.description,
-                            extract: response.data.extract
-                         };
+                title: response.data.title,
+                description: response.data.description,
+                extract: response.data.extract
+            };
             dispatch(result(data));
         })
         .catch(err => {
-            console.log(err);
+            const error = {
+                extract: "Aucun Resultat"
+            };
+            dispatch(result(error));
         })
     }
-}
+};

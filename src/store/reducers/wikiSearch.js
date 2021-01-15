@@ -4,7 +4,7 @@ import { updateObject } from '../utility';
 const initialState = {
     inputValue: '',
     result: null,
-    liked: []
+    liked: JSON.parse(localStorage.getItem('liked')) || []
 }
 
 const inputValue = (state, action) => {
@@ -24,6 +24,7 @@ const liked = (state, action) => {
     const newTab = [...state.liked];
     newTab.push(action.liked);
     const uniqueNames = Array.from(new Set(newTab));
+    localStorage.setItem('liked', JSON.stringify(uniqueNames));
     return updateObject( state, {
         liked: uniqueNames
     });

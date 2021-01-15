@@ -15,7 +15,7 @@ const App = () => {
             <Search />         
             <Button title="SEARCH" color="button__blue" />
             { result && <SearchResult /> }
-            { result && <Button title="LIKE" color="button__pink"/>}
+            { result?.title && <Button title="LIKE" color="button__pink"/>}
         </div>
   );
 }

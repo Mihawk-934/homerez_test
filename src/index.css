@@ -1,3 +1,10 @@
 body {
   background-color: rgba(246, 246, 246);
 }
+
+@media screen and (max-width: 270px){ 
+  html, body {
+    min-width: 270px;
+    min-height: 568px;
+  }
+}
