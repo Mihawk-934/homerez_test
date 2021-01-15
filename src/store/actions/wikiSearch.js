@@ -22,11 +22,6 @@ export const liked = (liked) => {
     }
 };
 
-export const error = () => {
-    return {
-        type: actionTypes.ERROR
-    }
-};
 
 export const fecthValue = (inputValue) => {
     return dispatch => {

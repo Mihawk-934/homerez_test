@@ -20,11 +20,12 @@ const result = (state, action) => {
 }
 
 const liked = (state, action) => {
-    console.log(state.liked);
     const newTab = [...state.liked];
     newTab.push(action.liked);
     const uniqueNames = Array.from(new Set(newTab));
+    
     localStorage.setItem('liked', JSON.stringify(uniqueNames));
+
     return updateObject( state, {
         liked: uniqueNames
     });
